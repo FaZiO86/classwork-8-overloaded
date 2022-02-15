@@ -23,6 +23,12 @@ template <typename T1, typename T2> T1/*либо T2*/ maxFunc(T1 num1, T2 num2) {	//
 	return num1 > num2 ? num1 : num2; 
 }
 
+template <typename T> T mean(T array[], int lenght) {
+	T sum = 0;
+	for (int i = 0; i < lenght; i++)
+		sum += array[i];
+	return sum / lenght;
+}
 
 int main() {
 	setlocale (LC_ALL, "Russian");
@@ -43,8 +49,12 @@ int main() {
 	cout << maxFunc(n, m) << endl;*/
 	cout << "Конец." << endl;
 
-			//Задача
-	
+			//Задача 1
+	cout << "Задача 1\nИзначальный массив: " << endl;
+	float z1[5] = { 4.1, 4.9, 2.02, 0.101, 1.2 };
+	for (int i = 0; i < 5; i++)
+		cout << z1[i] << " ";
+	cout << "\nСреднее арифметическое элементов массива = " << mean(z1, 5) <<  endl;
 	
 	return 0;
 }
